@@ -1,26 +1,51 @@
 import serial
 import time
-from random import randint
+#from random import randint
 
 numleds = 60
-arduino = serial.Serial('/dev/tty.usbmodem11571', 115200)
+teensy = serial.Serial('/dev/tty.usbmodem11571', 115200)
 time.sleep(2)
 
-biglist = []
+led_list = []
 
-for x in range(60):
-	#biglist.append(x)
-	biglist.append(255)
-	biglist.append(255)
-	biglist.append(0)
-barray = bytearray(biglist)
+for x in range(numleds):
+    led_list.append(255)
+    led_list.append(255)
+    led_list.append(0)
+
+teensy.write(bytearray(led_list))
+time.sleep(2)
+
+led_list = []
+for x in range(numleds):
+    led_list.append(0)
+    led_list.append(255)
+    led_list.append(0)
+
+teensy.write(bytearray(led_list))
+time.sleep(2)
+
+led_list = []
+for x in range(numleds):
+    led_list.append(0)
+    led_list.append(0)
+    led_list.append(255)
+
+teensy.write(bytearray(led_list))
+time.sleep(2)
 
 def setPixel(pixel, r, g, b):
-	arduino.write(chr(pixel)+chr(r)+chr(g)+chr(b))
+    led_list[pixel*3] = r
+    led_list[pixel*3+1] = g
+    led_list[pixel*3+2] = b
+    
+def update():
+    teensy.write(bytearray(led_list))
 
-arduino.write(barray)
-#for led in range(numleds):
-	#setPixel(led, 20, 0, 20)
-	#setPixel(randint(0,59),randint(0,255),randint(0,255),randint(0,255))
-time.sleep(5)
-arduino.close()
+for x in range(numleds):
+    if x % 2:
+        setPixel(x,255,255,255)
+update()
+
+time.sleep(10)
+teensy.close()
