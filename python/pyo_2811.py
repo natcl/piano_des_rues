@@ -1,16 +1,21 @@
 from pyo import *
 import serial
-import time
 
-teensy = serial.Serial('/dev/ttyACM0', 115200)
-led_list = []
+if sys.platform == 'darwin':
+    serial_port = '/dev/tty.usbmodem11571'
+elif sys.platform == 'linux2':
+    serial_port = '/dev/ttyACM0'
+
 numleds = 60
+teensy = serial.Serial(serial_port, 115200)
+led_list = []
 
 s = Server(duplex=0).boot()
-a = SuperSaw(freq=[100,2000], detune=0.6, bal=0.7, mul=0.5).out()
+a = SuperSaw(freq=[100, 2000], detune=0.6, bal=0.7, mul=0.5).out()
 #l = Linseg([(0,20),(2,15000)], loop=True)
 #a = Sine(freq=[l,1000], mul=1).out()
 #l.play()
+
 
 def tolist(x):
     global led_list
