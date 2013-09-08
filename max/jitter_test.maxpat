@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86"
 		}
 ,
@@ -37,7 +37,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 634.0, 250.0, 34.0, 20.0 ],
-					"presentation_rect" : [ 634.0, 248.0, 0.0, 0.0 ],
 					"text" : "/~ 2."
 				}
 
@@ -52,7 +51,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
 					"patching_rect" : [ 634.0, 280.0, 83.0, 20.0 ],
-					"presentation_rect" : [ 634.0, 278.0, 0.0, 0.0 ],
 					"text" : "snapshot~ 20"
 				}
 
@@ -67,7 +65,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 634.0, 221.0, 38.0, 20.0 ],
-					"presentation_rect" : [ 634.0, 219.0, 0.0, 0.0 ],
 					"text" : "+~ 1."
 				}
 
@@ -203,8 +200,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 70.0, 119.0, 119.0, 20.0 ],
-					"presentation_rect" : [ 29.0, 195.0, 0.0, 0.0 ],
-					"text" : "jit.matrix 3 char 60 1"
+					"text" : "jit.matrix 3 char 84 1"
 				}
 
 			}
@@ -437,7 +433,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 70.0, 280.0, 119.0, 20.0 ],
-					"text" : "jit.matrix 3 char 60 1"
+					"text" : "jit.matrix 3 char 84 1"
 				}
 
 			}
@@ -451,7 +447,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
 					"patching_rect" : [ 70.0, 91.0, 115.0, 20.0 ],
-					"text" : "jit.noise 3 char 60 1"
+					"text" : "jit.noise 3 char 84 1"
 				}
 
 			}

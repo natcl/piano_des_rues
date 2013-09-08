@@ -19,7 +19,7 @@
 
 #include <OctoWS2811.h>
 
-const int ledsPerStrip = 60;
+const int ledsPerStrip = 83;
 
 DMAMEM int displayMemory[ledsPerStrip*6];
 int drawingMemory[ledsPerStrip*6];
@@ -28,7 +28,7 @@ const int config = WS2811_GRB | WS2811_800kHz;
 
 OctoWS2811 leds(ledsPerStrip, displayMemory, drawingMemory, config);
 
-char serial_array[ledsPerStrip*3];
+char serial_array[ledsPerStrip*3*2];
 
 void setup() {
   Serial.begin(115200);
