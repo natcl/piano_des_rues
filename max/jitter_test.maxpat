@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 0.0, 72.0, 1255.0, 536.0 ],
+		"rect" : [ 0.0, 176.0, 1280.0, 646.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -199,8 +199,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 70.0, 119.0, 119.0, 20.0 ],
-					"text" : "jit.matrix 3 char 84 1"
+					"patching_rect" : [ 70.0, 119.0, 125.0, 20.0 ],
+					"text" : "jit.matrix 3 char 166 1"
 				}
 
 			}
@@ -300,7 +300,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 70.0, 428.0, 91.0, 20.0 ],
+					"patching_rect" : [ 70.0, 494.0, 91.0, 20.0 ],
 					"text" : "serial c 115200"
 				}
 
@@ -432,8 +432,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 70.0, 280.0, 119.0, 20.0 ],
-					"text" : "jit.matrix 3 char 84 1"
+					"patching_rect" : [ 70.0, 280.0, 125.0, 20.0 ],
+					"text" : "jit.matrix 3 char 166 1"
 				}
 
 			}
@@ -446,8 +446,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 70.0, 91.0, 115.0, 20.0 ],
-					"text" : "jit.noise 3 char 84 1"
+					"patching_rect" : [ 70.0, 91.0, 121.0, 20.0 ],
+					"text" : "jit.noise 3 char 166 1"
 				}
 
 			}
@@ -682,7 +682,7 @@
 					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 142.0, 263.0, 212.0, 263.0, 212.0, 304.0, 79.5, 304.0 ],
+					"midpoints" : [ 212.0, 263.0, 212.0, 304.0, 79.5, 304.0 ],
 					"source" : [ "obj-57", 0 ]
 				}
 

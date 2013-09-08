@@ -8,9 +8,10 @@ if sys.platform == 'darwin':
 elif sys.platform == 'linux2':
     serial_port = '/dev/ttyACM0'
 
-numleds = 60
+numleds = 166
 teensy = serial.Serial(serial_port, 115200)
 led_list = [0 for x in range(numleds*3)]
+print len(led_list)
 
 
 def setPixel(pixel, r, g, b):

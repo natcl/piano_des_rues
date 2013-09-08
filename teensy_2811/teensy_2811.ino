@@ -33,16 +33,25 @@ char serial_array[ledsPerStrip*3*2];
 void setup() {
   Serial.begin(115200);
   leds.begin();
-  leds.show();
+  test();
 }
 
 void loop() {
-  if (Serial.available() == ledsPerStrip*3) {
-    Serial.readBytes(serial_array, ledsPerStrip*3);
-    for (byte i = 0; i < ledsPerStrip ; i++) {
+  if (Serial.available() == ledsPerStrip*3*2) {
+    Serial.readBytes(serial_array, ledsPerStrip*3*2);
+    for (int i = 0; i < ledsPerStrip*3*2 ; i++) {
       leds.setPixel(i, serial_array[i*3], serial_array[i*3+1], serial_array[i*3+2] );
     }
     leds.show();
   }
 }
 
+void test() {
+  for (byte i = 0; i < ledsPerStrip * 2 ; i++){
+    leds.setPixel(i, random(0,255), random(0,255), random(0,255));
+    leds.show();
+    delay(20);
+    leds.setPixel(i, 0, 0, 0);
+    leds.show();
+  }
+}
